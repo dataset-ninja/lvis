@@ -13,37 +13,46 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "LVIS"
+PROJECT_NAME_FULL: str = "LVIS: A Dataset for Large Vocabulary Instance Segmentation v1.0"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.Custom(url="https://www.lvisdataset.org/dataset#license")
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Domain.General()]
+CATEGORY: Category = Category.General(benchmark=True)
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(), CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2019
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://www.lvisdataset.org/dataset"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = None
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/lvis"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = {
+    "Training set 1,270,141 instances (1 GB)": "https://dl.fbaipublicfiles.com/LVIS/lvis_v1_train.json.zip",
+    "Training set 100,170 images (18 GB)": "http://images.cocodataset.org/zips/train2017.zip",    
+    "Validation set 244,707 instances (192 MB)": "https://dl.fbaipublicfiles.com/LVIS/lvis_v1_val.json.zip",  
+    "Validation set 19,809 images (1 GB)": "http://images.cocodataset.org/zips/val2017.zip", 
+    "Test Dev info (4 MB)" : "https://dl.fbaipublicfiles.com/LVIS/lvis_v1_image_info_test_dev.json.zip",
+    "Test Dev 19,822 images (6 GB)" : "http://images.cocodataset.org/zips/test2017.zip",
+    "Test Challenge  info (4 MB)" : "https://dl.fbaipublicfiles.com/LVIS/lvis_v1_image_info_test_challenge.json.zip",
+    "Test Challenge  19,822 images (6 GB)" : "http://images.cocodataset.org/zips/test2017.zip",    
+}
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -51,15 +60,15 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
+PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "https://arxiv.org/abs/1908.03195"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = "https://github.com/lvis-dataset"
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
+AUTHORS: Optional[List[str]] = ["Agrim Gupta", "Piotr Dollár", "Ross Girshick"]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Facebook AI Research (FAIR)"
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://ai.meta.com/research/"
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
 SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None

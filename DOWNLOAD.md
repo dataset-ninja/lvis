@@ -1,6 +1,6 @@
 Dataset **LVIS** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/p/P/nW/WPW94w89kuJtLNqVP3NikWZeYKJSGkwfkcq6b0vxuHhAuHoCbl05IuvMtQtnstpS4pxQv6tu555Ts2bwKB7dqYbrQuWaAcBRhYL9WpvDL3jjEeDpaMqTU8SJTWOU.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/R/f/nl/ytg9lEdiV94VyuvDAlJlM0fqhSra6ZoormArNATb8lmtnHgFCS1OJS5G4u83H4lpx3P1sMqfIG7NPd7gEt3OSaTALAOdLzEZJvL5G4BqfNmP3qlWxCA37dQYDPJ4.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash

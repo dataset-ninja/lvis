@@ -10,8 +10,7 @@ The authors made a significant observation that the desired evaluation protocol 
 
 <img src="https://github.com/dataset-ninja/gland-segmentation/assets/78355358/78bef88d-2699-48bf-960c-7653c705463d" alt="image" width="800">
 
-<i>Category relationships from left to right: non-disjoint category pairs may be in partially overlapping, parent-child, or
-equivalent (synonym) relationships, implying that a single object may have multiple valid labels. The fair evaluation of an object detector must take the issue of multiple valid labels into account.</i>
+<span style="font-size: smaller; font-style: italic;">Category relationships from left to right: non-disjoint category pairs may be in partially overlapping, parent-child, or equivalent (synonym) relationships, implying that a single object may have multiple valid labels. The fair evaluation of an object detector must take the issue of multiple valid labels into account.</span>
 
 Furthermore, the authors emphasized that membership in the Positive and Negative sets for the test split remained undisclosed. Algorithms had no prior knowledge of which categories would be evaluated in each image. Consequently, an algorithm was required to make predictions for all categories in each test image.
 
